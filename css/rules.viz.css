@@ -1,0 +1,11 @@
+@media (min-width: 993px) {
+  .brand-logo{
+  	left: 40%;
+
+  }
+}
+
+.dropdown-trigger{
+	width: 23%;
+	margin: 4px;
+}
