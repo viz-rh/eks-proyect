@@ -30,9 +30,9 @@
 			    </div>
 			    <div class="nav-content">
 			      <ul id="tab-sweep-demo" class="tabs tabs-transparent">
-			        <li class="tab">	<a onclick="a=$('.brand-logo'); a[0].innerHTML= 'Formulas'  " class="active" href="#test1"> 	<i class="material-icons">opacity</i></a></li>
-			        <li class="tab">	<a onclick="a=$('.brand-logo'); a[0].innerHTML= 'Lotes' "  href="#test2"><i class="material-icons">layers</i></a></li>
-			        <li class="tab">	<a onclick="a=$('.brand-logo'); a[0].innerHTML= 'Calculador' " href="#test3">	<i class="material-icons">widgets</i></a></li>
+			        <li class="tab">	<a onclick="a=$('.brand-logo'); a[0].innerHTML= 'Formulas'; rell_form(); " class="active" href="#test1"> 	<i class=" t1 material-icons">opacity</i></a></li>
+			        <li class="t2 tab">	<a onclick="a=$('.brand-logo'); a[0].innerHTML= 'Lotes' "  href="#test2"><i class="material-icons">layers</i></a></li>
+			        <li class="t3 tab">	<a onclick="a=$('.brand-logo'); a[0].innerHTML= 'Calculador' " href="#test3">	<i class="material-icons">widgets</i></a></li>
 			      </ul>
 			    </div>
 			</nav>
@@ -41,63 +41,103 @@
 			<div id="test1"  class="col s12">
 				<div class="container">
 					<div class="card-panel light-green lighten-5">
+						
 						<div class="row">
-						<!-- Dropdown Trigger -->
-						  <a class='dropdown-trigger btn s12' href='#' data-target='dropdown1'>PRODUCTO</a>
+						
+						  <div class="input-field col s3 grey darken-4 white-text">
+						    <select>
+						      <option value="8" >H1</option>
+						      <option value="1">Option 1</option>
+						      <option value="2">Option 2</option>
+						      <option value="3">Option 3</option>
+						    </select>
+						    <label>FORMULA</label>
+						  </div>
 
-						  <!-- Dropdown Structure -->
-						  <ul id='dropdown1' class='dropdown-content'>
-						    <li><a href="#!">one</a></li>
-						    <li><a href="#!">two</a></li>
-						    <li class="divider" tabindex="-1"></li>
-						    <li><a href="#!">three</a></li>
-						    <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-						    <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
-						  </ul>
+						  <div class="input-field col s3 grey darken-4 white-text">
+						    <select>
+						      <option value="8" >H1</option>
+						      <option value="1">Option 1</option>
+						      <option value="2">Option 2</option>
+						      <option value="3">Option 3</option>
+						    </select>
+						    <label>FORMULA</label>
+						  </div>
 
-						 <!-- Dropdown Trigger -->
-						  <a class='dropdown-trigger btn' href='#' data-target='dropdown2'>CODIGO</a>
+						  <div class="input-field col s3 grey darken-4 white-text">
+						    <select>
+						      <option value="8" >H1</option>
+						      <option value="1">Option 1</option>
+						      <option value="2">Option 2</option>
+						      <option value="3">Option 3</option>
+						    </select>
+						    <label>FORMULA</label>
+						  </div>
 
-						  <!-- Dropdown Structure -->
-						  <ul id='dropdown2' class='dropdown-content'>
-						    <li><a onclick="a=this; console.log(a); " href="#!">one</a></li>
-						    <li><a href="#!">two</a></li>
-						    <li class="divider" tabindex="-1"></li>
-						    <li><a href="#!">three</a></li>
-						    <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-						    <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
-						  </ul>
+						  <div class="input-field col s3 grey darken-4 white-text">
+						    <select>
+						      <option value="8" >H1</option>
+						      <option value="1">Option 1</option>
+						      <option value="2">Option 2</option>
+						      <option value="3">Option 3</option>
+						    </select>
+						    <label>FORMULA</label>
+						  </div>
+						  
+						</div>
+						<div class="row">
+							<div class="col s12 m-etiqueta-producto">
+								<h5 class="etiqueta-producto">
+									EKS-3B
+								</h5>
+								&nbsp; &nbsp;
+								<h5 class="etiqueta-producto">
+									Morado Lavander
+								</h5>
+							</div>
+						</div>
 
-						 <!-- Dropdown Trigger -->
-						  <a class='dropdown-trigger btn' href='#' data-target='dropdown3'>PESO</a>
+						<div class="row">
+							<div class="col s12">
+								<table>
+							        <thead>
+							          <tr>
+							              <th>Name</th>
+							              <th>Item Name</th>
+							              <th>Item Price</th>
+							          </tr>
+							        </thead>
 
-						  <!-- Dropdown Structure -->
-						  <ul id='dropdown3' class='dropdown-content'>
-						    <li><a href="#!">one</a></li>
-						    <li><a href="#!">two</a></li>
-						    <li class="divider" tabindex="-1"></li>
-						    <li><a href="#!">three</a></li>
-						    <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-						    <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
-						  </ul>
-						 <!-- Dropdown Trigger -->
-						  <a class='dropdown-trigger btn' href='#' data-target='dropdown4'>BATIDAS</a>
+							        <tbody>
+							          <tr>
+							            <td>Alvin</td>
+							            <td>Eclair</td>
+							            <td>$0.87</td>
+							          </tr>
+							          <tr>
+							            <td>Alan</td>
+							            <td>Jellybean</td>
+							            <td>$3.76</td>
+							          </tr>
+							          <tr>
+							            <td>Jonathan</td>
+							            <td>Lollipop</td>
+							            <td>$7.00</td>
+							          </tr>
+							        </tbody>
+							    </table>
 
-						  <!-- Dropdown Structure -->
-						  <ul id='dropdown4' class='dropdown-content'>
-						    <li><a href="#!">one</a></li>
-						    <li><a href="#!">two</a></li>
-						    <li class="divider" tabindex="-1"></li>
-						    <li><a href="#!">three</a></li>
-						    <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-						    <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
-						  </ul>
+
+							</div>	
+						</div>
        
 
 					</div>
 				</div>
 				Test 1
 			</div>
+
+
   			
   			<div id="test2" class="col s12">
   				test 0
@@ -122,8 +162,23 @@
     		 	$('select').formSelect();
     		 	$('.dropdown-trigger').dropdown();
 
-
-    		});
+    		 	ref= $('.active')[0].hash;
+    		 	switch(ref){
+    		 		case '#test1':{
+    		 			rell_form();
+    		 			break;
+    		 		}
+    		 	
+    		 		case '#test2':{
+    		 			rell_form();
+    		 			break;
+    		 		}
+    		 		case '#test3':{
+    		 			rell_form();
+    		 			break;
+    		 		}
+    		 	}
+    		 });
 
       </script>
     </body>

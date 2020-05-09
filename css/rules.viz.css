@@ -12,3 +12,32 @@
 	padding-top: 0px;
 	font-size: 80%;
 }
+
+.input-field{
+	    width: 23% !important;
+    margin-left: 1% !important;
+    margin-right: 1% !important;
+    border-radius: 3px;
+}
+
+.input-field label{
+
+	left :10% !important;
+	top : -35px !important;
+	font-size: 1rem;
+
+}
+
+.m-etiqueta-producto{
+	display: flex;
+	justify-content: center;
+}
+
+.etiqueta-producto{
+	display: inline-block;
+	margin: 0 0 0 0;
+}
+
+div.row{
+	margin-bottom: 10px;
+}
