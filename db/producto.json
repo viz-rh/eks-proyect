@@ -1,12 +1,19 @@
 [
 {
-	"producto1": "EKS"
-}
+	"id"		:	"Eks",
+	"producto1": "Eckos"
+},
 {
-	"producto1": "BULL EYES"
-}
+	"id"		:	"Power",
+	"producto1": "Power"
+},
 {
-	"producto1": "TBC"
+	"id"		:	"Be",
+	"producto1": "Bull Eyes"
+},
+{
+	"id"		:	"Tbc",
+	"producto1": "Eco clip"
 }
 
 

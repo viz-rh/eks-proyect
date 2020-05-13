@@ -1,0 +1,23 @@
+.viz-color{
+	background-color: #ffff00;
+	color: white !important; 
+}
+/*.logo-viz{
+	color: black !important;
+}
+*/
+.textlog-viz{
+	color: #616161 !important;
+}
+
+.viz-text{
+	color: #424242 !important;
+}
+
+.tab a{
+	color: #757575 !important;
+}
+
+.tab a.active{
+	color: #424242 !important;
+}
