@@ -41,3 +41,10 @@
 div.row{
 	margin-bottom: 10px;
 }
+
+.variante{
+	margin-bottom: 10px;
+}
+.variante div.card{
+	margin: 0px;
+}
