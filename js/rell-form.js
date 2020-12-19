@@ -13,14 +13,10 @@ console.log("logrado");
 		/* comprobacion para test */
 }
 
-
 function rell_form(){
 $("option").remove();
 console.clear()
-
-
 /* lectura de valores predeterminados */
-
 var producto;
 var codigo;
 var cantidad;
@@ -31,8 +27,8 @@ async function loaddata(){
 	const select3 = document.querySelector('#select-3');
 	const select4 = document.querySelector('#select-4');
 	const letras = "codigo";
-respuesta = await fetch("db/form.init.json")
-datos = await respuesta.json()
+	respuesta = await fetch("db/form.init.json")
+	datos = await respuesta.json()
 	 
 			datos.forEach(datos => {
 			console.log(`${datos.producto}`);
@@ -65,9 +61,9 @@ datos = await respuesta.json()
 			opcion4.value = 1;
 			select4.appendChild(opcion4);
 
-respuesta = await fetch("db/producto.json")
-datos =await respuesta.json()
-datos.forEach(datos => {
+	respuesta = await fetch("db/producto.json")
+	datos =await respuesta.json()
+	datos.forEach(datos => {
 			console.log(`${datos.producto1}`);
 			producto_item	= 	datos.producto1;
 			if(producto != producto_item){
@@ -79,9 +75,9 @@ datos.forEach(datos => {
 				}
 			})
 
-respuesta = await fetch("db/codigo.json")
-datos =await respuesta.json()
-datos.forEach(datos => {
+	respuesta = await fetch("db/codigo.json")
+	datos =await respuesta.json()
+	datos.forEach(datos => {
 			console.log(`${datos.producto1}`);
 			codigo_item	= 	datos.codigo;
 			if(codigo != codigo_item){
@@ -94,25 +90,15 @@ datos.forEach(datos => {
 			select2.appendChild(opcion);	
 				}
 			})
-
-
-
-
-			reload();
-			console.log(batidas)
 		
 			
-
+reload();
 		
 }
 loaddata();
-
 /* lectura de valores predeterminados */
-
 }
 
-$(".selected").onchange = function() {
-msgbox("hello");
 
-}
+
 
