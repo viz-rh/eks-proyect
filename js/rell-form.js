@@ -99,6 +99,21 @@ loaddata();
 /* lectura de valores predeterminados */
 }
 
+// codigo para drop don de opciones
+$('ul li:has(ul)').hover(function(e) {},
+function(e) {
+	$(this).find('ul').css({display: "none"});
+});
+$('ul li:has(ul)').click(function(e){
+   console.log("dd")
+   $(this).find('ul').css({display: "block"});
+})
+
+//se tuvo problemas de dos dias con la ultima implementacion. de esta funcion. al final se tuvo respuesta
+$('#Ddown-list a').click((e)=>{
+	value=$(e.target)[0].innerHTML;
+	$('.down-leyend')[0].textContent = value;
+})
 
 
 
