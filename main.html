@@ -52,7 +52,7 @@
 					
 				
 					<div class="col s10 m5 variante" >
-						<div class="card" 
+						<div class="card Ddown" 
 							style="
 								background-color:#00B35C;
 								height: 35px;
@@ -62,14 +62,20 @@
 								color:white
 							"
 						>
-						<div class="input-field col s3 white-text viz-color">
-						    <select id="select-4">
-						      
-						    </select>
-						    <label>Batidas</label>
-						  </div>
-
+						
+						<ul class="menu">
+							
+							 <li><a class="down-leyend" href="#">Servicios</a>
+								<ul id="Ddown-list" style="z-index: 100;">
+									 <li><a href="#">Jubilaci&oacute;n</a></li>
+									 <li><a href="#">Pensi&oacute;n</a></li>
+									 <li><a href="#">Jubilaci&oacute;n por invalidez</a></li>
+									 <li><a href="#">Jubilaci&oacute;n por edad avanzada</a></li>
+								 </ul>
+							</li>
+						</ul>
 						</div>
+						
 							<!--  se debe de hacer responsivo esta parte { width, height} -->
 						<div class="card" style="width: 20px; height: 50px; background: #6E6E6E">
 							
@@ -258,7 +264,9 @@
     		 			rell_form();
     		 			break;
     		 		}
-    		 	}
+				 }
+				
+				
     		 });
 
       </script>
