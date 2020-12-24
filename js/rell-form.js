@@ -33,10 +33,10 @@ async function loaddata(){
 			datos.forEach(datos => {
 			//console.log(`${datos.producto}`);
 			producto	= 	datos.producto;
-			pid=datos.id;
-			 codigo 	=	datos.codigo;
-			 cantidad 	=	datos.cantidad;
-			 batidas	=	datos.batidas;	
+			pid			=	datos.id;
+			codigo 		=	datos.codigo;
+			cantidad 	=	datos.cantidad;
+			batidas		=	datos.batidas;	
 				
 			})
 
@@ -61,11 +61,33 @@ async function loaddata(){
 			opcion4.value = 1;
 			select4.appendChild(opcion4);
 
+		listsA= document.querySelectorAll('.Ddown-list1')
+		console.log(listsA)
 	respuesta = await fetch("db/producto.json")
 	datos =await respuesta.json()
 	datos.forEach(datos => {
 			//console.log(`${datos.producto1}`);
 			producto_item	= 	datos.producto1;
+
+			//insertar productos 
+			listItem = document.createElement('li');
+			listItem2 = document.createElement('li');
+			itemA = document.createElement('a');
+			itemA.innerHTML =producto_item;
+			itemA2 = document.createElement('a');
+			itemA2.innerHTML =producto_item;
+			listItem.appendChild(itemA);
+			listItem2.appendChild(itemA2);
+			iteration=0
+			listsA.forEach(element =>{
+				console.log(iteration)
+				iteration==0?apendIt=listItem : apendIt=listItem2
+				element.appendChild(apendIt)
+				iteration=1
+					
+			})
+			
+
 			if(producto != producto_item){
 				//console.log(producto +" es diferente de " +producto_item)
 			const opcion = document.createElement('option');
@@ -93,21 +115,23 @@ async function loaddata(){
 		
 			
 reload();
-		
-}
-loaddata();
-/* lectura de valores predeterminados */
-}
+
 //bloque de codigo para manejo de drop downs 
 $('.Ddown-list1 a,.Ddown-list2 a').click((event)=>{
 	value=$(event.target)[0].innerHTML;
 	var z = $(event.target)[0];
 	var id= z.parentElement.parentElement.id;
-	//console.log(clase=z.parentElement.parentElement.className);
+	var clase= z.parentElement.parentElement.className;
 	var x = z.parentElement.parentElement.previousElementSibling;
 	x.textContent = value;
 	DdownHide(id,clase);
 })
+		
+}
+loaddata();
+/* lectura de valores predeterminados */
+}
+
 function DdownShow(id, clase){
     console.log("open")
 	lists=document.querySelectorAll('.Ddown-'+clase);
