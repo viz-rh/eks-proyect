@@ -73,6 +73,7 @@ ul.menu {
 	color: white;
 	}
 	.menu li ul {
+	z-index: 100;
 	display:none;
 	position:absolute;
 	top:20px;
