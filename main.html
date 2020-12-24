@@ -4,12 +4,12 @@
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen, projection"/>
       <link rel="stylesheet" type="text/css" href="css/rules.viz.css">
       <link rel="stylesheet" type="text/css" href="css/colors/7.css" id="viz-color">
 
       <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1.0"/>
     </head>
 
     <body style="background-color: #282C34;">
@@ -65,8 +65,8 @@
 						
 						<ul class="menu">
 							
-							 <li><a class="down-leyend" href="#">Servicios</a>
-								<ul id="Ddown-list" style="z-index: 100;">
+							 <li id=botton-drop><a onclick="DdownShow(1,'list1');" class="down-leyend" href="#">Servicios</a>
+								<ul class="Ddown-list1" id="1" >
 									 <li><a href="#">Jubilaci&oacute;n</a></li>
 									 <li><a href="#">Pensi&oacute;n</a></li>
 									 <li><a href="#">Jubilaci&oacute;n por invalidez</a></li>
@@ -84,7 +84,7 @@
 
 					</div>  
 					<div class="col s10 m5 variante">
-						<div class="card" 
+						<div class="card Ddown" 
 							style="
 								background-color:#00B35C;
 								height: 35px;
@@ -92,12 +92,18 @@
 								padding: 5px 35px;
 							"
 						>
-
-							
-							<span style="font-size: medium;">
-									Ipsum
-									<!--  lote -->
-							</span>
+							<ul class="menu">
+									
+								<li id=botton-drop>
+									<a onclick="DdownShow(2,'list1');" class="down-leyend" href="#">Servicios</a>
+									<ul class="Ddown-list1" id="2" >
+										<li><a href="#">Jubilaci&oacute;n</a></li>
+										<li><a href="#">Pensi&oacute;n</a></li>
+										<li><a href="#">Jubilaci&oacute;n por invalidez</a></li>
+										<li><a href="#">Jubilaci&oacute;n por edad avanzada</a></li>
+									</ul>
+								</li>
+							</ul>
 						</div>
 
 						<!--  se debe de hacer responsivo esta parte { width, height} -->
@@ -107,7 +113,15 @@
 							<!-- ... -->
 					</div>   
 				</div>
-
+				<div id="panel1" style="color: red;font-size:x-large;">
+					HELLO
+				</div>
+				<button onclick="white();">
+					access
+				</button>
+				<button onclick="blue();">
+					inacesible
+				</button>
 						
 				<div class="container">
 					
@@ -240,7 +254,7 @@
     <script type="text/javascript" src="js/rell-form.js"></script>
     <script type="text/javascript" src="js/rell-lot.js"></script>
     <script type="text/javascript" src="js/rell-cal.js"></script>
-
+	<script type="text/javascript" src="js/anti_copy.js"></script>
 
       <script type="text/javascript">
       	  	$(document).ready(function(){
