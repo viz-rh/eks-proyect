@@ -15,7 +15,7 @@ console.log("logrado");
 
 function rell_form(){
 $("option").remove();
-console.clear()
+
 /* lectura de valores predeterminados */
 var producto;
 var codigo;
@@ -31,7 +31,7 @@ async function loaddata(){
 	datos = await respuesta.json()
 	 
 			datos.forEach(datos => {
-			console.log(`${datos.producto}`);
+			//console.log(`${datos.producto}`);
 			producto	= 	datos.producto;
 			pid=datos.id;
 			 codigo 	=	datos.codigo;
@@ -64,10 +64,10 @@ async function loaddata(){
 	respuesta = await fetch("db/producto.json")
 	datos =await respuesta.json()
 	datos.forEach(datos => {
-			console.log(`${datos.producto1}`);
+			//console.log(`${datos.producto1}`);
 			producto_item	= 	datos.producto1;
 			if(producto != producto_item){
-				console.log(producto +" es diferente de " +producto_item)
+				//console.log(producto +" es diferente de " +producto_item)
 			const opcion = document.createElement('option');
 			opcion.innerHTML = producto_item;
 			opcion.value = datos.id;
@@ -78,10 +78,10 @@ async function loaddata(){
 	respuesta = await fetch("db/codigo.json")
 	datos =await respuesta.json()
 	datos.forEach(datos => {
-			console.log(`${datos.producto1}`);
+			//console.log(`${datos.producto1}`);
 			codigo_item	= 	datos.codigo;
 			if(codigo != codigo_item){
-				console.log(codigo +" es diferente de " +codigo_item)
+				//console.log(codigo +" es diferente de " +codigo_item)
 
 			const opcion = document.createElement('option');
 			opcion.innerHTML = codigo_item;
@@ -98,22 +98,32 @@ reload();
 loaddata();
 /* lectura de valores predeterminados */
 }
-
-// codigo para drop don de opciones
-$('ul li:has(ul)').hover(function(e) {},
-function(e) {
-	$(this).find('ul').css({display: "none"});
-});
-$('ul li:has(ul)').click(function(e){
-   console.log("dd")
-   $(this).find('ul').css({display: "block"});
+//bloque de codigo para manejo de drop downs 
+$('.Ddown-list1 a,.Ddown-list2 a').click((event)=>{
+	value=$(event.target)[0].innerHTML;
+	var z = $(event.target)[0];
+	var id= z.parentElement.parentElement.id;
+	//console.log(clase=z.parentElement.parentElement.className);
+	var x = z.parentElement.parentElement.previousElementSibling;
+	x.textContent = value;
+	DdownHide(id,clase);
 })
-
-//se tuvo problemas de dos dias con la ultima implementacion. de esta funcion. al final se tuvo respuesta
-$('#Ddown-list a').click((e)=>{
-	value=$(e.target)[0].innerHTML;
-	$('.down-leyend')[0].textContent = value;
-})
-
-
-
+function DdownShow(id, clase){
+    console.log("open")
+	lists=document.querySelectorAll('.Ddown-'+clase);
+		lists.forEach(element =>{
+			if(element.id==id){
+				return element.style.display="block";
+			}
+		})
+	
+}
+function DdownHide(id,clase){
+    console.log("close")
+    lists=document.querySelectorAll('.'+clase);
+		lists.forEach(element =>{
+			if(element.id==id){
+				return element.style.display="none";
+			}
+		})
+}
