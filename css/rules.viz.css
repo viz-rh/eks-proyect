@@ -1,8 +1,24 @@
-@media (min-width: 993px) {
+@media only screen and  (min-width: 993px) {
   .brand-logo{
   	left: 40%;
 
   }
+}
+
+@media only screen and  (max-width: 273px) {
+	h4.modal-title{
+		font-size: 1.5rem;
+	}	
+}
+@media only screen and  (max-width: 289px) {
+	i.modal-close{
+		display: none;
+	}	
+}
+@media only screen and  (max-width: 257px) {
+	div div span{
+		font-size: 0px;
+	}	
 }
 
 .dropdown-trigger{
@@ -59,39 +75,72 @@ ul.menu {
 	}
 	.menu li {
 	line-height:18px;
-	font-size:13px;
+	font-size:18px;
 	position:relative;
 	float:left;
 	}
-	.menu li a {
+	.menu li a.down-leyend {
+	text-align: center;
+	display: inline-block;
+	width: 80px;
+	color: #fff;
+	text-transform:uppercase;
+	padding: 0px;
+	text-decoration:none;
+	vertical-align: sub;
+	border: white solid 1px;
+    border-radius: 100px;
+    padding: 0px 5px;
+	}
+	.menu li ul a{
 	color: #fff;
 	text-transform:uppercase;
 	padding: 0px;
 	text-decoration:none;
 	vertical-align: sub;
 	}
+
+	.menu li a.down-leyend:hover {
+		
+		background: #313131;
+		border: #4497D8 solid 2px;
+		color: white;
+		position: absolute;
+    	bottom: -25px;
+   		z-index: 101;
+		}
 	.menu li a:hover {
 	background: #9c0101;
 	color: white;
 	}
 	.menu li ul {
+	border-bottom-left-radius: 13px;
+	border-bottom-right-radius: 13px;
+	padding-top: 8px;
 	z-index: 100;
 	display:none;
 	position:absolute;
-	top:20px;
-	width: 60px;
+	top:15px;
+	width: 80px;
     background-color: #1C1C1C;
     padding: 0;
-    list-style-type: none;
+	list-style-type: none;
+	text-align: center;
+	/* margin-left: 2px; */
 	}
 	.menu li ul li {
-	    width: 60px;
+	    width: 80%;
+    	margin: 10%;
+    	margin-top: 0px;
+    	margin-bottom: 15px;
+    	padding-top: 7.5px;
     	border: none;
     	border-top: 2px dotted #313131;
-    	padding: 1px 5px;
 	}
 	.menu li ul li:first-child {
-	    border-top: none;
+		border-top: none;
+		/* margin-bottom: 8px; */
+		margin-top: 10px;
 	}
    .menu li ul li a {
 	width: 240px;
@@ -108,5 +157,5 @@ ul.menu {
 		background-color:#00B35C;
 		height: 35px;
 		border-radius: 10px;
-		padding: 5px 15px;
+		padding: 3px 10px;
 	}

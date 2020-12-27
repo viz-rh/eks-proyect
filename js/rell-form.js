@@ -67,7 +67,7 @@ async function loaddata(){
 	datos =await respuesta.json()
 	datos.forEach(datos => {
 			//console.log(`${datos.producto1}`);
-			producto_item	= 	datos.producto1;
+			producto_item	= 	datos.id;
 
 			//insertar productos 
 			listItem = document.createElement('li');
