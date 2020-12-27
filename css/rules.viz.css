@@ -4,7 +4,8 @@
 
   }
 }
-
+/* modal component responsive */
+/* ........................................ */
 @media only screen and  (max-width: 273px) {
 	h4.modal-title{
 		font-size: 1.5rem;
@@ -16,10 +17,40 @@
 	}	
 }
 @media only screen and  (max-width: 257px) {
-	div div span{
-		font-size: 0px;
+	.card.s2 span{
+		display: inline-block;
+		font-size:1rem!important ;
+		/* display: none; */
+	}
+	.card.s2 i{
+		
+		padding-top: 0.0rem;
+		margin-left:30%;
+		font-size: 2rem;
+		float: inline-end;
+	}
+	.card.s2 {
+		width: 120px;
+		margin: auto;
+		margin-bottom: 12px;
+		padding: 0px!important;
+	}
+
+}
+@media only screen and  (max-width: 360px) {
+	.modal{ 
+		width: 80%;
 	}	
 }
+@media only screen and  (min-width: 258px) {
+		.card.s2 span{
+			display: initial;
+		}
+}		
+
+/* ......................................... */
+/* modal component responsive */
+
 
 .dropdown-trigger{
 	width: 24%;
