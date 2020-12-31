@@ -207,21 +207,28 @@ function btn_hover(clase,id){
 }
 function btn_out(clase,id){
 	a=clase.split(" ");
-
-	console.log("hello2")
-	console.log($("."+a[1]+"#"+id).animate(
+	element=$("."+a[1]+"#"+id);
+	
+	element.animate(
 		{	
 			borderRadius: "0px",
 			width:"50px"
 		}
-	));
-	$("."+a[1]+"#"+id).css({
+	);
+	element.css(
+		{
 		border: "none",
 		position: "static",
 		borderBottom: "white solid 1px",
     	bottom: "0px",
 		zIndex: "auto",
 		backgroundColor: "transparent"
-	});
+		}
+	//codigo para limpiar el atributo style
+	);
+	setTimeout(()=>{
+		element.removeAttr("style")
+	},1000)
+	
 	
 }
