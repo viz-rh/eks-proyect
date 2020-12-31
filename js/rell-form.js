@@ -208,13 +208,6 @@ function btn_hover(clase,id){
 function btn_out(clase,id){
 	a=clase.split(" ");
 	element=$("."+a[1]+"#"+id);
-	
-	element.animate(
-		{	
-			borderRadius: "0px",
-			width:"50px"
-		}
-	);
 	element.css(
 		{
 		border: "none",
@@ -224,11 +217,18 @@ function btn_out(clase,id){
 		zIndex: "auto",
 		backgroundColor: "transparent"
 		}
+	
 	//codigo para limpiar el atributo style
+	);
+	element.animate(
+		{	
+			borderRadius: "0px",
+			width:"50px"
+		},290
 	);
 	setTimeout(()=>{
 		element.removeAttr("style")
-	},1000)
+	},300)
 	
 	
 }
