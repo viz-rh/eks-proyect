@@ -19,18 +19,18 @@
 @media only screen and  (max-width: 257px) {
 	.card.s2 span{
 		display: inline-block;
-		font-size:1rem!important ;
+		/* font-size:1rem!important ; */
 		/* display: none; */
 	}
 	.card.s2 i{
 		
 		padding-top: 0.0rem;
-		margin-left:30%;
-		font-size: 2rem;
+		margin-left:8%;
+		/* font-size: 2rem; */
 		float: inline-end;
 	}
 	.card.s2 {
-		width: 120px;
+		
 		margin: auto;
 		margin-bottom: 12px;
 		padding: 0px!important;
@@ -111,17 +111,20 @@ ul.menu {
 	float:left;
 	}
 	.menu li a.down-leyend {
+	font-size: x-large;
+    height: 1.9rem;
+    padding-top: 5px;
 	text-align: center;
+
 	display: inline-block;
-	width: 80px;
+	width: 50px;
 	color: #fff;
-	text-transform:uppercase;
-	padding: 0px;
+	/* text-transform:uppercase; */
+	
 	text-decoration:none;
 	vertical-align: sub;
-	border: white solid 1px;
-    border-radius: 100px;
-    padding: 0px 5px;
+	border-bottom: white solid 1px;
+    /* border-radius: 100px; */
 	}
 	.menu li ul a{
 	color: #fff;
@@ -132,13 +135,9 @@ ul.menu {
 	}
 
 	.menu li a.down-leyend:hover {
-		
+		border-radius: 10px;
 		background: #313131;
-		border: #4497D8 solid 2px;
 		color: white;
-		position: absolute;
-    	bottom: -25px;
-   		z-index: 101;
 		}
 	.menu li a:hover {
 	background: #9c0101;

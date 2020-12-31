@@ -117,16 +117,47 @@ async function loaddata(){
 reload();
 
 //bloque de codigo para manejo de drop downs 
-$('.Ddown-list1 a,.Ddown-list2 a').click((event)=>{
-	value=$(event.target)[0].innerHTML;
-	var z = $(event.target)[0];
-	var id= z.parentElement.parentElement.id;
-	var clase= z.parentElement.parentElement.className;
-	var x = z.parentElement.parentElement.previousElementSibling;
-	x.textContent = value;
+$('.Ddown-list1 a,.Ddown-list2 a').on("click",(event)=>{
+		Ddown_btn_close(event,1);
+	});
+$('.Ddown-list1,.Ddown-list2').on("mouseleave",(event)=>{
+	Ddown_btn_close(event,2);
+	});
+var contador=0;
+function Ddown_btn_close(event,a){
+	if(contador==0){
+			console.log(event)
+	switch(a){
+		case 1:{
+			value=$(event.currentTarget)[0].innerHTML;
+			var z = $(event.currentTarget)[0];
+			var id= z.parentElement.parentElement.id;
+			var clase= z.parentElement.parentElement.className;
+			var x = z.parentElement.parentElement.previousElementSibling;
+			x.textContent = value;
+			id1=x.id;
+			clase1=x.className;
+			contador=1;
+			break;
+		}
+		case 2:{
+			var z=$(event.currentTarget)[0];
+			var id=z.id;
+			var clase=z.className;
+			var x=z.previousElementSibling;
+			var id1=x.id;
+			var clase1=x.className;
+			contador=0;
+			break;
+		}
+	}
+	btn_out(clase1,id1);
 	DdownHide(id,clase);
-})
-		
+	setTimeout(()=>{
+		contador=0	
+		},1000)
+	}
+	}		
 }
 loaddata();
 /* lectura de valores predeterminados */
@@ -137,7 +168,8 @@ function DdownShow(id, clase){
 	lists=document.querySelectorAll('.Ddown-'+clase);
 		lists.forEach(element =>{
 			if(element.id==id){
-				return element.style.display="block";
+				return setTimeout(()=>{element.style.display="block"},300)
+				
 			}
 		})
 	
@@ -150,4 +182,46 @@ function DdownHide(id,clase){
 				return element.style.display="none";
 			}
 		})
+}
+var a=0
+function btn_hover(clase,id){
+
+		console.log("hello")
+	console.log($("."+clase+"#"+id).animate(
+		{
+			borderRadius: "100px",
+			width:"80px",
+			marginBotton:"100px",
+		}
+	))
+	$("."+clase+"#"+id).css({
+		border: "#4497D8 solid 2px",
+		position: "absolute",
+    	bottom: "-25px",
+		zIndex: 101,
+		background: "#313131"
+	});
+	 
+	
+	
+}
+function btn_out(clase,id){
+	a=clase.split(" ");
+
+	console.log("hello2")
+	console.log($("."+a[1]+"#"+id).animate(
+		{	
+			borderRadius: "0px",
+			width:"50px"
+		}
+	));
+	$("."+a[1]+"#"+id).css({
+		border: "none",
+		position: "static",
+		borderBottom: "white solid 1px",
+    	bottom: "0px",
+		zIndex: "auto",
+		backgroundColor: "transparent"
+	});
+	
 }
