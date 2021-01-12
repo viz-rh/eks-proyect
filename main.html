@@ -5,7 +5,8 @@
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen, projection"/>
-      <link rel="stylesheet" type="text/css" href="css/rules.viz.css">
+	  <link rel="stylesheet" type="text/css" href="css/rules.viz.css">
+	  <link rel="stylesheet" type="text/css" href="css/modals.viz.css">
       <link rel="stylesheet" type="text/css" href="css/colors/7.css" id="viz-color">
 
       <!--Let browser know website is optimized for mobile-->
@@ -53,10 +54,7 @@
 				
 					<div class="col s10 m5 variante" >
 						<div class="card Ddown">
-						
-							<ul class="menu" style="
-							width: 50px;
-						">
+							<ul class="menu" style="width: 50px;">
 								<li id=botton-drop>
 									<a onclick="DdownShow(1,'list1'); btn_hover('leyend1','1');"  class="down-leyend leyend1" id="1" href="#">Elije</a>
 									<ul class="Ddown-list1" id="1" ></ul>
@@ -72,8 +70,39 @@
 						</div>
 						
 							<!--  se debe de hacer responsivo esta parte { width, height} -->
-						<div class="card" style="width: 20px; height: 50px; background: #6E6E6E">
-							
+						<div class="viz-kbat">
+								<div class="viz-kbat-card" id="1">
+										<form>
+											<input type="number" value="12"  name="batidas" id="1">
+											</input>
+											<label style="display:inline-block; color:white">bts.</label>
+											<br>
+											<input type="number" value="25.32" style="display:inline-block; width:40px; text-align: center; height: 11px;
+											"  name="kilogramos" id="2">
+											</input>
+											<label>kg</label>
+										</form>
+
+								</div>
+								
+								<div class="viz-kbat-card" id="2">
+										<form>
+											<input type="number" value="12" style="display:inline-block; width: 20px; text-align: center; height: 11px; margin-bottom:0px
+											"  name="batidas" id="1">
+											</input>
+											<label style="display:inline-block; color:white">bts.</label>
+											<br>
+											<input type="number" value="25.32" style="display:inline-block; width:40px; text-align: center; height: 11px;
+											"  name="kilogramos" id="2">
+											</input>
+											<label style="display:inline-block; color:white">kg</label>
+										</form>
+
+								</div>
+
+								<div class="btn-plus-bts">
+										+
+								</div>
 						</div>
 							<!-- ... -->						
 
